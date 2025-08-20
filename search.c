@@ -3,11 +3,11 @@
 #include <stdbool.h>
 
 //Function to match input search word with strings
-void match(char string1[], char string2[][81], int index);
+void match(char string1[], char string2[][81], int ind1);
 
 int main(){
 
-  int i = 0;          //Index position
+  int ind1 = 0;       //Index of main function
   int totalRows = 0;  //Total rows for 2D array
   char sWord[20];     //Char array for search word
   char theFile[20];   //Char array for read file
@@ -45,12 +45,12 @@ int main(){
   FILE *f = fopen(theFile, "r");
 
   //While "i" is less than the input index get strings from file
-   while (i < totalRows && fgets(lines[i], sizeof(lines[i]), f)) {
-        ++i;
+   while (ind1 < totalRows && fgets(lines[ind1], sizeof(lines[ind1]), f)) {
+        ++ind1;
     }
 
   //Matching search word with strings
-  match(sWord, lines, i);
+  match(sWord, lines, ind1);
 
   //Closing the file
   fclose(f);
@@ -58,22 +58,22 @@ int main(){
   return 0;
 }
 
-void match(char string1[], char string2[][81], int index){
+void match(char string1[], char string2[][81], int ind1){
 
-  int i = 0; //Index Position
+  int ind2 = 0; //Index of match function
 
   //Looping through total lines in file
-  for(i = 0; i < index; ++i){
+  for(ind2 = 0; ind2 < ind1; ++ind2){
     bool isFound = false;
-    if(strstr(string2[i], string1)) //If search word matches string, display results
+    if(strstr(string2[ind2], string1)) //If search word matches string, display results
       {
         printf("A Match!\n");
-        printf("Line #%d: %s\n", i + 1, string2[i]);
+        printf("Line #%d: %s\n", ind2 + 1, string2[ind2]);
         isFound = true;
       } 
     if(! isFound) //If search word does not match, display results
       {
-        printf("Line #%d: No Match!\n\n", i + 1);
+        printf("Line #%d: No Match!\n\n", ind2 + 1);
       }
   }
 }
