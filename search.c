@@ -43,7 +43,7 @@ int main(){
   //Setting the file stream
   FILE *f = fopen(theFile, "r");
 
-  //While "i" is less than the input index get strings from file
+  //While ind1 is less than the total row count get strings from file
    while (ind1 < totalRows && fgets(lines[ind1], sizeof(lines[ind1]), f)) {
         ++ind1;
     }
