@@ -58,21 +58,13 @@ int main(){
 }
 
 void match(char string1[], char string2[][81], int ind1){
-
-  int ind2 = 0; //Index of match function
-
-  //Looping through total lines in file
-  for(ind2 = 0; ind2 < ind1; ++ind2){
-    bool isFound = false;
-    if(strstr(string2[ind2], string1)) //If search word matches string, display results
-      {
-        printf("A Match!\n");
-        printf("Line #%d: %s\n", ind2 + 1, string2[ind2]);
-        isFound = true;
-      } 
-    if(! isFound) //If search word does not match, display results
-      {
-        printf("Line #%d: No Match!\n\n", ind2 + 1);
-      }
-  }
+    for(int ind2 = 0; ind2 < ind1; ++ind2){
+        if(strstr(string2[ind2], string1)){ 
+            // substring found
+            printf("Line #%d: %s\n", ind2 + 1, string2[ind2]);
+        } else {
+            // substring not found
+            printf("Line #%d: No Match!\n", ind2 + 1);
+        }
+    }
 }
