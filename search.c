@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
 
@@ -25,7 +26,11 @@ int main(){
   }
 
   //2D array for storing lines from file
-  char lines[totalRows][81];
+  char (*lines)[81] = malloc(totalRows * sizeof(*lines));
+    if (!lines) {
+     perror("malloc failed");
+      exit(1);
+    }
 
   //Getting file to read from user
   printf("File name: ");
@@ -45,11 +50,22 @@ int main(){
   //While ind1 is less than the total row count get strings from file
    while (ind1 < totalRows && fgets(lines[ind1], sizeof(lines[ind1]), f)) {
         lines[ind1][strcspn(lines[ind1], "\r\n")] = '\0';
+        printf("DEBUG line %d: '%s'\n", ind1, lines[ind1]);
+        printf("DEBUG search: '%s'\n", sWord);
         ++ind1;
     }
 
+    for(int i = 0; lines[ind1][i]; i++) {
+    printf("%02X ", (unsigned char)lines[ind1][i]);
+}
+    printf("\n");
+
+
   //Matching search word with strings
   match(sWord, lines, ind1);
+
+  //Freeing memory
+  free(lines);
 
   //Closing the file
   fclose(f);
