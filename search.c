@@ -62,7 +62,7 @@ void match(char string1[], char string2[][81], int ind1){
         if(strstr(string2[ind2], string1)){ 
             // substring found
             printf("Line #%d: %s", ind2 + 1, string2[ind2]);
-        } else {
+        }else {
             // substring not found
             printf("Line #%d: No Match!\n", ind2 + 1);
         }
