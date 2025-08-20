@@ -44,6 +44,7 @@ int main(){
 
   //While ind1 is less than the total row count get strings from file
    while (ind1 < totalRows && fgets(lines[ind1], sizeof(lines[ind1]), f)) {
+        lines[ind1][strcspn(lines[ind1], "\r\n")] = '\0';
         ++ind1;
     }
 
