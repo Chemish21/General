@@ -12,7 +12,6 @@ int main(){
   char sWord[20];     //Char array for search word
   char theFile[20];   //Char array for read file
 
-
   printf("Enter total line count and name of file\n");
   printf("---------------------------------------\n");
   //Getting total row count of file
