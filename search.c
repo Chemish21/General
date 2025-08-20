@@ -26,7 +26,6 @@ int main(){
   }
 
   //2D array for storing lines from file
-  //Declaring here because totalRows needs to be set beforehand
   char lines[totalRows][81];
 
   //Getting file to read from user
