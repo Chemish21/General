@@ -1,0 +1,4 @@
+This repository is simply for small scale practice projects.  
+Below I will list what each project does.
+
+search.c: A program that will find all instances of a search word from within a file.  All lines are displayed indicating whether the search word is in that line or not.
