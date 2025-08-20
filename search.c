@@ -24,8 +24,8 @@ int main(){
       return 1;
   }
 
-  //2D array for storing lines from file
-  char lines[totalRows][81];
+  //2D array for storing rows from file
+  char rows[totalRows][81];
 
   //Getting file to read from user
   printf("File name: ");
@@ -43,12 +43,12 @@ int main(){
   FILE *f = fopen(theFile, "r");
 
   //While ind1 is less than the total row count get strings from file
-   while (ind1 < totalRows && fgets(lines[ind1], sizeof(lines[ind1]), f)) {
+   while (ind1 < totalRows && fgets(rows[ind1], sizeof(rows[ind1]), f)) {
         ++ind1;
     }
 
   //Matching search word with strings
-  match(sWord, lines, ind1);
+  match(sWord, rows, ind1);
 
   //Closing the file
   fclose(f);
@@ -62,7 +62,7 @@ void match(char string1[], char string2[][81], int ind1){
         if(strstr(string2[ind2], string1)){ 
             // substring found
             printf("Line #%d: %s", ind2 + 1, string2[ind2]);
-        }else {
+        } else {
             // substring not found
             printf("Line #%d: No Match!\n", ind2 + 1);
         }
