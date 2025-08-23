@@ -25,15 +25,16 @@ int main(){
   printf("---------------------------------------------------\n");
   printf("Enter String: ");
   scanf("%10s", string);
+  
   printf("\n");
-
   printf("Calculating\n");
   printf("-----------\n");
+  
   //Index for string check
   int i = 0;
   //Loop through string
   while (string[i] != '\n' && string[i] != '\0') {
-    //When string char matches a lowercase char, add to total using numeric value of char
+    //When string char matches a lowercase char, add to total based on numeric value of char
     for (int j = 1; j <= 26; j++) { 
       if (string[i] == lowerC[j]) {
         printf("Adding: %d + Letter %c: %d\n", total, string[i], numbC[j]);
