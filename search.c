@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdbool.h>
 
 //Function to match input search word with strings
 void match(char string1[], char string2[][81], int ind1);
