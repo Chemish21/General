@@ -13,7 +13,7 @@ int main(){
   //Array to hold comparison string
   char string[11];
 
-  //Informing user as well as getting input
+  //Informing user as well as getting input string
   printf("This program adds lowercase letters from a string by 1-26 value\n");
   printf("Only accepts up to 10 lowercase chars\n");
   printf("Uppercase letters/other chars are not counted\n");
