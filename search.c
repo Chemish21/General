@@ -57,7 +57,7 @@ int main(){
 
 //For "ind2"/match index is less than totalRow count in "ind1", match lines with search word
 void match(char string1[], char string2[][81], int ind1){
-    for(int ind2 = 0; ind2 < ind1; ++ind2){
+    for(int ind2 = 0; ind2 <= ind1; ++ind2){
         if(strstr(string2[ind2], string1)){ 
             // substring found
             printf("Line #%d: %s", ind2 + 1, string2[ind2]);
