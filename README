@@ -5,4 +5,4 @@ search.c: A program that will find all instances of a search word from within a 
 
 lowLetC.c: A program that reads in a string and outputs a total value based on the lowercase letters.  Essentially, lowercase letters are 1-26 correlated with a-z.  For example, if input "aaaaa" would be "1+1+1+1+1" totaling 5.
 
-guess.py : A python CLI number guessing game.  User tries to guess a number between 1-100.
+guess.py : A python CLI random number guessing game.  User tries to guess a number between 1-100.
