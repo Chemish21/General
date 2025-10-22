@@ -5,15 +5,39 @@ import random
 rand_number = random.randint(1,100)
 
 #Difficulty chances
-easy = 10
-medium = 5
-hard = 3
+difficulty = {"Easy": 10,
+              "Medium": 5,
+              "Hard": 3}
 
-#Start index for difficulty chances
-start = 1
+def play_game(the_difficulty, total_chances):
+  #User guess
+  guess = 0
 
-#Number of attempts from user
-att = 0
+  #Number of attempts from user starting from 1st attempt
+  att_count = 1
+
+  diff = the_difficulty
+  chances = total_chances
+
+  print(f"Great! You have selected the {diff} difficulty level.")
+  print("Lets Start the game!")
+  print()
+  while att_count <= chances:
+    guess = int(input("Enter Your Guess: "))
+    if guess < rand_number:
+      print(f"Incorrect! The number is greater than {guess}!")
+      print()
+    elif guess > rand_number:
+      print(f"Incorrect! The number is less than {guess}!")
+      print()
+    else:
+      print(f"Congratulations! You guessed it right in {att_count} attempts!")
+      break
+    att_count += 1
+
+  if guess != rand_number:
+    print("You'll get it next time!")
+    print(f"The Answer was {rand_number}")
 
 print("---------------------------------------------------------")
 print("Welcome to the Number Guessing Game!")
@@ -34,57 +58,9 @@ while choice < 1 or choice > 3:
 
 print()
 if choice == 1:
-  print("Great! You have selected the Easy difficulty level.")
-  print("Lets Start the game!")
-  print()
-  while start <= easy:
-    guess = int(input("Enter Your Guess: "))
-    att += 1
-    if guess < rand_number:
-      print(f"Incorrect! The number is greater than {guess}!")
-      print()
-    elif guess > rand_number:
-      print(f"Incorrect! The number is less than {guess}!")
-      print()
-    else:
-      print(f"Congratulations! You guessed it right in {att} attempts!")
-      break
-    start += 1
+  play_game("Easy", difficulty.get("Easy"))
 elif choice == 2:
-  print("Great! You have selected the Medium difficulty level.")
-  print("Lets Start the game!")
-  print()
-  while start <= medium:
-    guess = int(input("Enter Your Guess: "))
-    att += 1
-    if guess < rand_number:
-      print(f"Incorrect! The number is greater than {guess}!")
-      print()
-    elif guess > rand_number:
-      print(f"Incorrect! The number is less than {guess}!")
-      print()
-    else:
-      print(f"Congratulations! You guessed it right in {att} attempts!")
-      break
-    start += 1
+  play_game("Medium", difficulty.get("Medium"))
 else:
-  print("Great! You have selected the Hard difficulty level.")
-  print("Lets Start the game!")
-  print()
-  while start <= hard:
-    guess = int(input("Enter Your Guess: "))
-    att += 1
-    if guess < rand_number:
-      print(f"Incorrect! The number is greater than {guess}!")
-      print()
-    elif guess > rand_number:
-      print(f"Incorrect! The number is less than {guess}!")
-      print()
-    else:
-      print(f"Congratulations! You guessed it right in {att} attempts!")
-      break
-    start += 1
+  play_game("Hard", difficulty.get("Hard"))
     
-if guess != rand_number:
-  print("You'll get it next time!")
-  print(f"The Answer was {rand_number}")
