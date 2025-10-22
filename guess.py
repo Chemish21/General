@@ -39,16 +39,22 @@ def play_game(the_difficulty, total_chances):
     print("You'll get it next time!")
     print(f"The Answer was {rand_number}")
 
-print("---------------------------------------------------------")
-print("Welcome to the Number Guessing Game!")
-print("Try guessing a number between 1 and 100.")
-print("You have a couple of chances to guess the correct number.")
-print("---------------------------------------------------------")
-print("Please select a difficulty level:")
-print("1. Easy (10 chances)")
-print("2. Medium (5 chances)")
-print("3. Hard (3 chances)")
-print()
+def welcome():
+  print("---------------------------------------------------------")
+  print("Welcome to the Number Guessing Game!")
+  print("Try guessing a number between 1 and 100.") 
+  print("You have a couple of chances to guess the correct number.")
+  print("---------------------------------------------------------")
+
+def select_difficulty():
+  print("Please select a difficulty level:")
+  print("1. Easy (10 chances)")
+  print("2. Medium (5 chances)")
+  print("3. Hard (3 chances)")
+  print()
+
+welcome()
+select_difficulty()
 
 choice = int(input("Enter your choice: "))
 
