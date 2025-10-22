@@ -64,6 +64,7 @@ while choice < 1 or choice > 3:
   choice = int(input("Enter choice: "))
 
 print()
+
 if choice == 1:
   play_game("Easy", difficulty.get("Easy"))
 elif choice == 2:
