@@ -71,4 +71,3 @@ elif choice == 2:
   play_game("Medium", difficulty.get("Medium"))
 else:
   play_game("Hard", difficulty.get("Hard"))
-    
