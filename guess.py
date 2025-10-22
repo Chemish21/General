@@ -53,6 +53,7 @@ def select_difficulty():
   print("3. Hard (3 chances)")
   print()
 
+#Start of game
 welcome()
 select_difficulty()
 
