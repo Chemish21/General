@@ -2,7 +2,8 @@ This repository is simply for small scale practice projects.
 Below I will list each project and what it does by language.
 
 Language: C
-search.c: A program that will find all instances of a search word from within a file.  All lines are displayed indicating whether the search word is in that line or not.
+search.c: A program that will find all instances of a search word from within a file.  All lines are displayed indicating whether the search word is in that line or not.  
+
 lowLetC.c: A program that reads in a string and outputs a total value based on the lowercase letters.  Essentially, lowercase letters are 1-26 correlated with a-z.  For example, if input "aaaaa" would be "1+1+1+1+1" totaling 5.
 
 Language: Python
