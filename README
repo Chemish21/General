@@ -9,4 +9,4 @@ lowLetC.c: A program that reads in a string and outputs a total value based on t
 Language: Python
 guess.py : A python CLI random number guessing game.  User tries to guess a number between 1-100.  This idea was inspired by roadmap.sh.  Source: https://roadmap.sh/projects/number-guessing-game  
 
-name.py: A program that has the user input names and randomly selects a name from a list.  
+name.py: A program that has the user input a certain number of names.  Then, a name is randomly selected and displayed to the user.  
