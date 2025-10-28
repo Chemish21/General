@@ -7,4 +7,6 @@ search.c: A program that will find all instances of a search word from within a 
 lowLetC.c: A program that reads in a string and outputs a total value based on the lowercase letters.  Essentially, lowercase letters are 1-26 correlated with a-z.  For example, if input "aaaaa" would be "1+1+1+1+1" totaling 5.
 
 Language: Python
-guess.py : A python CLI random number guessing game.  User tries to guess a number between 1-100.  This idea was inspired by roadmap.sh.  Source: https://roadmap.sh/projects/number-guessing-game
+guess.py : A python CLI random number guessing game.  User tries to guess a number between 1-100.  This idea was inspired by roadmap.sh.  Source: https://roadmap.sh/projects/number-guessing-game  
+
+name.py: A program that has the user input names and randomly selects a name from a list.  
